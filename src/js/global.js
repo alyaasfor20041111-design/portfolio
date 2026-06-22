@@ -145,7 +145,9 @@ const els = {
     nameInput: document.getElementById('name'),
     messageInput: document.getElementById('message'),
     contactBtn: document.getElementById('contact-btn'),
-    footerText: document.getElementById('footer-text')
+    footerText: document.getElementById('footer-text'),
+    sidebarLogoTitle: document.getElementById('sidebar-logo-title'),
+sidebarLogoSubtitle: document.getElementById('sidebar-logo-subtitle'),
 };
 
 // --- منطق تبديل الوضع الداكن المطور ---
@@ -222,6 +224,10 @@ langToggleBtn.addEventListener('click', () => {
     els.messageInput.placeholder = data.placeholderMessage;
     els.contactBtn.textContent = data.contactBtn;
     els.footerText.textContent = data.footerText;
+
+    // الإضافة هنا لتحديث لوغو السايد بار أيضاً 🌟
+    els.sidebarLogoTitle.textContent = data.logoTitle;
+    els.sidebarLogoSubtitle.textContent = data.logoSubtitle;
 
     langToggleBtn.textContent = data.langBtn;
 });
