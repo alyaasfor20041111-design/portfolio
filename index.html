@@ -115,38 +115,49 @@
   <!-- القائمة الجانبية المنزلقة والزجاجية بالكامل للهواتف والتابلت -->
   <div id="mobile-sidebar-backdrop"
     class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity duration-500 opacity-0"></div>
-  <aside id="mobile-sidebar" class="fixed top-0 right-0 h-full w-[80%] max-w-xs bg-background/95 dark:bg-bg-dark/95 border-l border-border/20 dark:border-border-dark/20 shadow-2xl z-50 backdrop-blur-xl translate-x-full transition-transform duration-500 ease-out flex flex-col justify-between p-8">
-  <div class="space-y-8">
-    <div class="flex items-center justify-between">
-      <div href="#home" class="flex flex-col">
-        <span id="sidebar-logo-title" class="font-bold text-primary dark:text-icon text-[24px] md:text-primary-size leading-none tracking-tight transition-transform duration-300 group-hover:scale-98">
-          عليا عصفور
-        </span>
-        <span id="sidebar-logo-subtitle" class="text-[10px] md:text-secondary-size text-secondary dark:text-icon/80 font-semibold tracking-wider mt-0.5 transition-all duration-300 group-hover:opacity-100">
-          مطورة برمجيات
-        </span>
+  <aside id="mobile-sidebar"
+    class="fixed top-0 right-0 h-full w-[80%] max-w-xs bg-background/95 dark:bg-bg-dark/95 border-l border-border/20 dark:border-border-dark/20 shadow-2xl z-50 backdrop-blur-xl translate-x-full transition-transform duration-500 ease-out flex flex-col justify-between p-8">
+    <div class="space-y-8">
+      <div class="flex items-center justify-between">
+        <div href="#home" class="flex flex-col">
+          <span id="sidebar-logo-title"
+            class="font-bold text-primary dark:text-icon text-[24px] md:text-primary-size leading-none tracking-tight transition-transform duration-300 group-hover:scale-98">
+            عليا عصفور
+          </span>
+          <span id="sidebar-logo-subtitle"
+            class="text-[10px] md:text-secondary-size text-secondary dark:text-icon/80 font-semibold tracking-wider mt-0.5 transition-all duration-300 group-hover:opacity-100">
+            مطورة برمجيات
+          </span>
+        </div>
+        <button id="sidebar-close"
+          class="p-2 rounded-full hover:bg-input/10 dark:hover:bg-input-dark/20 text-primary dark:text-icon transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
       </div>
-      <button id="sidebar-close" class="p-2 rounded-full hover:bg-input/10 dark:hover:bg-input-dark/20 text-primary dark:text-icon transition-colors">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
+
+      <nav class="flex flex-col space-y-4">
+        <a href="#home" id="mob-nav-home"
+          class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-1">الرئيسية</a>
+        <a href="#projects" id="mob-nav-projects"
+          class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-2">المشاريع</a>
+        <a href="#skills" id="mob-nav-skills"
+          class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-3">المهارات</a>
+        <a href="#timeline" id="mob-nav-timeline"
+          class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-4">مسيرتي</a>
+        <a href="#contact" id="mob-nav-contact"
+          class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-5">اتصل
+          بي</a>
+      </nav>
     </div>
 
-    <nav class="flex flex-col space-y-4">
-      <a href="#home" id="mob-nav-home" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-1">الرئيسية</a>
-      <a href="#projects" id="mob-nav-projects" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-2">المشاريع</a>
-      <a href="#skills" id="mob-nav-skills" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-3">المهارات</a>
-      <a href="#timeline" id="mob-nav-timeline" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-4">مسيرتي</a>
-      <a href="#contact" id="mob-nav-contact" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-5">اتصل بي</a>
-    </nav>
-  </div>
-
-  <div class="space-y-4">
-    <div id="local-time" class="text-[11px] font-semibold opacity-70 border-t border-border/10 pt-4 flex items-center gap-2">
-      <i class="fa-solid fa-clock"></i>
-      <span id="time-val">00:00:00 AM</span>
+    <div class="space-y-4">
+      <div id="local-time"
+        class="text-[11px] font-semibold opacity-70 border-t border-border/10 pt-4 flex items-center gap-2">
+        <i class="fa-solid fa-clock"></i>
+        <span id="time-val">00:00:00 AM</span>
+      </div>
     </div>
-  </div>
-</aside>
+  </aside>
 
   <!-- مساحة وهمية موازية للهيدر لتفادي حجب المحتوى -->
   <div class="h-28"></div>
@@ -188,7 +199,7 @@
 
       <!-- الأيقونات الاجتماعية الفخمة في الهيرو للهواتف والتابلت -->
       <div class="flex xl:hidden justify-center gap-6 text-xl py-2">
-        <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/963939821817" target="_blank" rel="noopener noreferrer"
           class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title hover:scale-110 active:scale-95 transition-all duration-300"
           aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
