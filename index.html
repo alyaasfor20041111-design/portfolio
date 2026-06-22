@@ -37,53 +37,49 @@
 
   <!-- ==================== 1. الـ HEADER الفخم والمتكامل ==================== -->
   <header
-    class="fixed top-0 left-1/2 -translate-x-1/2 w-full z-50  backdrop-blur-xl bg-background/70 dark:bg-bg-dark/70 border border-border/20 dark:border-border-dark/20 transition-all duration-300 shadow-lg shadow-primary/5">
-    <!-- شريط تقدم القراءة في أسفل الهيدر -->
+    class="fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 backdrop-blur-xl bg-background/70 dark:bg-bg-dark/70 border border-border/20 dark:border-border-dark/20 transition-all duration-300 shadow-lg shadow-primary/5">
     <div id="scroll-progress"
       class="absolute bottom-0 left-6 right-6 h-[2px] bg-secondary transition-all duration-100 rounded-full"
       style="width: 0%"></div>
 
-    <div class="px-6 md:px-10 h-20 flex items-center justify-between">
+    <div class="px-6 md:px-10 h-20 grid grid-cols-2 md:grid-cols-3 items-center w-full relative">
 
-      <!-- اللوغو الاحترافي: الشعار واسم المهنة تحته مباشرة -->
-      <a href="#home" class="flex flex-col focus:outline-none group">
-        <span id="logo-title"
-          class="font-bold text-primary dark:text-icon text-[24px] md:text-primary-size leading-none tracking-tight transition-transform duration-300 group-hover:scale-98">
-          عليا عصفور
-        </span>
-        <span id="logo-subtitle"
-          class="text-[10px] md:text-secondary-size text-secondary dark:text-icon/80 font-semibold tracking-wider mt-0.5 transition-all duration-300 group-hover:opacity-100">
-          مطورة برمجيات
-        </span>
-      </a>
+      <div class="flex justify-start items-center h-full">
+        <a href="#home" class="flex flex-col justify-center focus:outline-none group">
+          <span id="logo-title"
+            class="font-bold text-primary dark:text-icon text-[24px] md:text-primary-size leading-none tracking-tight transition-transform duration-300 group-hover:scale-98">
+            عليا عصفور
+          </span>
+          <span id="logo-subtitle"
+            class="text-[10px] md:text-secondary-size text-secondary dark:text-icon/80 font-semibold tracking-wider mt-1 leading-none transition-all duration-300 group-hover:opacity-100">
+            مطورة برمجيات
+          </span>
+        </a>
+      </div>
 
-      <!-- روابط التنقل السريع: تفاعلية كاملة مع تمييز دقيق -->
-      <nav class="hidden md:flex items-center gap-8">
+      <nav class="hidden md:flex items-center justify-center gap-8 h-full">
         <a href="#home" id="nav-home"
-          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">الرئيسية</a>
+          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full flex items-center justify-center h-full">الرئيسية</a>
         <a href="#projects" id="nav-projects"
-          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">المشاريع</a>
+          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full flex items-center justify-center h-full">المشاريع</a>
         <a href="#skills" id="nav-skills"
-          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">المهارات</a>
+          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full flex items-center justify-center h-full">المهارات</a>
         <a href="#timeline" id="nav-timeline"
-          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">مسيرتي</a>
+          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full flex items-center justify-center h-full">مسيرتي</a>
         <a href="#contact" id="nav-contact"
-          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">اتصل
+          class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full flex items-center justify-center h-full">اتصل
           بي</a>
       </nav>
 
-      <!-- أدوات التحكم الجانبية الفاخرة -->
-      <div class="flex items-center gap-3">
-        <!-- مؤشر الحالة الحي الذكي للتواصل السريع -->
+      <div class="flex items-center justify-end gap-3 h-full col-span-1 md:col-span-1">
         <div id="live-status"
-          class="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full border border-border/20 bg-input/15 dark:bg-input-dark/30 text-[11px] font-semibold">
+          class="hidden lg:flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-border/20 bg-input/15 dark:bg-input-dark/30 text-[11px] font-semibold">
           <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-glow"></span>
-          <span id="status-text">متاحة للعمل البرمجي</span>
+          <span id="status-text" class="leading-none">متاحة للعمل البرمجي</span>
         </div>
 
-        <!-- زر التبديل للوضع الداكن (تصميم هالو ناعم) -->
         <button id="theme-toggle"
-          class="p-2.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+          class="p-2.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center"
           aria-label="Toggle Theme">
           <svg id="theme-toggle-dark-icon" class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -96,22 +92,20 @@
           </svg>
         </button>
 
-        <!-- زر تبديل اللغة الفخم الكبسولي -->
         <button id="lang-toggle"
-          class="px-4 py-2 rounded-xl text-secondary-size font-bold tracking-widest bg-button text-button-title hover:bg-button-hover active:scale-95 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 cursor-pointer w-12 flex justify-center border border-border/10 dark:border-border-dark/10">
+          class="px-4 py-2 rounded-xl text-secondary-size font-bold tracking-widest bg-button text-button-title hover:bg-button-hover active:scale-95 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 cursor-pointer w-12 flex items-center justify-center border border-border/10 dark:border-border-dark/10">
           EN
         </button>
 
-        <!-- زر هامبرغر للهواتف بتأثير morphing متحرك -->
         <button id="mobile-menu-toggle"
-          class="md:hidden px-4 py-2 rounded-xl border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+          class="md:hidden p-3.5 rounded-xl border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center"
           aria-label="Toggle Mobile Menu">
           <i id="mobile-icon" class="fa-solid fa-bars text-sm"></i>
         </button>
       </div>
+
     </div>
   </header>
-
   <!-- القائمة الجانبية المنزلقة والزجاجية بالكامل للهواتف والتابلت -->
   <div id="mobile-sidebar-backdrop"
     class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity duration-500 opacity-0"></div>
