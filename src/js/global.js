@@ -1,6 +1,4 @@
 // ==================== SCRIPTS ==================== //
-
-// --- كائن الترجمات المتكامل والمتقن باللغتين ---
 // --- كائن الترجمات المتكامل والمتقن باللغتين (محدث بالكامل مع قسم المشاريع) ---
 const translations = {
     ar: {
@@ -619,3 +617,79 @@ function handleFormSubmit(event) {
 }
 
 
+function filterProjects(category) {
+    // 1. جلب كافة أزرار الفلترة داخل الحاوية
+    const buttons = document.querySelectorAll('#filter-buttons-container button');
+    
+    // 2. إزالة كلاس التفعيل وإعادة الأزرار لوضعها الطبيعي (الهوفر والخلفية الشفافة)
+    buttons.forEach(btn => {
+        btn.classList.remove('filter-active', 'bg-button', 'text-button-title');
+        btn.classList.add('bg-card/10', 'dark:bg-card-dark/20', 'text-button', 'hover:bg-button/10', 'dark:text-icon');
+    });
+
+    // 3. تحديد الزر الذي تم النقر عليه حالياً وتطبيق كلاسات التفعيل الفخمة عليه
+    const activeBtn = document.getElementById(`filter-btn-${category}`);
+    if (activeBtn) {
+        activeBtn.classList.add('filter-active', 'bg-button', 'text-button-title');
+        activeBtn.classList.remove('bg-card/10', 'dark:bg-card-dark/20', 'text-button', 'hover:bg-button/10', 'dark:text-icon');
+    }
+
+    // --- هنا يوضع منطق إخفاء وإظهار بطاقات المشاريع الخاص بكِ سابقاً ---
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block';
+            // يمكنك إضافة أنميشن ظهور هنا مثل fade-in إن وجد
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function updateActiveNavLink() {
+    const currentHash = window.location.hash || '#home';
+
+    // 1. تحديث قائمة الهيدر الرئيسي (الشاشات الكبيرة)
+    const desktopLinks = document.querySelectorAll('#main-nav a');
+    desktopLinks.forEach(link => {
+        if (link.getAttribute('href') === currentHash) {
+            link.classList.add('text-button-hover', 'dark:text-button-title');
+            link.classList.remove('text-button', 'dark:text-icon');
+            link.classList.remove('after:w-0', 'hover:after:w-full');
+            link.classList.add('after:w-full');
+        } else {
+            link.classList.remove('text-button-hover', 'dark:text-button-title');
+            link.classList.add('text-button', 'dark:text-icon');
+            link.classList.remove('after:w-full');
+            link.classList.add('after:w-0', 'hover:after:w-full');
+        }
+    });
+
+    // 2. تحديث القائمة الجانبية للموبايل (Mobile Sidebar) 🌟
+    // نبحث عن الروابط داخل عناصر التنقل في السايد بار باستخدام معرف الأزرار أو كلاساتها
+    const mobileLinks = document.querySelectorAll('#mobile-sidebar nav a');
+    mobileLinks.forEach(link => {
+        if (link.getAttribute('href') === currentHash) {
+            // كلاسات العنصر النشط (تغيير لون النص وإضافة خلفية مميزة تناسب الوضعين)
+            link.classList.add('text-button-hover', 'dark:text-button-title', 'bg-input/20', 'dark:bg-input-dark/40');
+            link.classList.remove('text-button', 'dark:text-icon');
+        } else {
+            // إعادة العناصر غير النشطة لوضعها الطبيعي الشفاف
+            link.classList.remove('text-button-hover', 'dark:text-button-title', 'bg-input/20', 'dark:bg-input-dark/40');
+            link.classList.add('text-button', 'dark:text-icon');
+        }
+    });
+}
+
+// تشغيل الدالة عند النقر على أي رابط في القائمة الرئيسية أو قائمة الموبايل
+document.querySelectorAll('#main-nav a, #mobile-sidebar nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        setTimeout(updateActiveNavLink, 50); // تأخير لضمان تحديث الـ hash بالمتصفح
+        
+        // (اختياري) إذا كنتِ تريدين إغلاق السايد بار تلقائياً بعد النقر على الرابط:
+        // if(mobileSidebar) mobileSidebar.classList.add('translate-x-full');
+    });
+});
+
+// تشغيل الدالة تلقائياً عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', updateActiveNavLink);
