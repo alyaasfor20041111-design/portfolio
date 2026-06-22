@@ -227,116 +227,65 @@
   </section>
 
   <!-- ==================== 3. قسم المشاريع الفخم والتفاعلي ==================== -->
-  <section id="projects" class="py-20 md:py-32 px-6 md:px-12 border-t border-border/10 dark:border-border-dark/10">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center space-y-4 mb-16">
-        <h2 id="projects-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary dark:text-icon">
-          أعمال ومشاريع مختارة</h2>
-        <p id="projects-sub"
-          class="text-xs md:text-secondary-size font-semibold uppercase tracking-wider text-secondary dark:text-icon/70">
-          تطبيقات وحلول رقمية فريدة تمت هندستها وتطويرها</p>
-      </div>
-
-      <!-- أزرار التصفية المتطورة -->
-      <div class="flex flex-wrap justify-center gap-2 mb-12 md:mb-16">
-        <button onclick="filterProjects('all')"
-          class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300"
-          id="filter-btn-all">الكل</button>
-        <button onclick="filterProjects('web')"
-          class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300"
-          id="filter-btn-web">الويب</button>
-        <button onclick="filterProjects('system')"
-          class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300"
-          id="filter-btn-system">الأنظمة</button>
-      </div>
-
-      <!-- شبكة بطاقات المشاريع الفخمة -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-        <!-- مشروع الويب -->
-        <div
-          class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2"
-          data-category="web">
-          <div
-            class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
-            <span
-              class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">منصة
-              حجوزات طبية</span>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-          <h3
-            class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">
-            منصة حجوزات طبية متكاملة</h3>
-          <p class="text-sm opacity-75 mb-6 leading-relaxed">نظام متطور لحجز المواعيد وإدارة العيادات مع لوحات تحكم
-            وتنبيهات فورية للأطباء والمرضى.</p>
-          <div class="flex flex-wrap items-center gap-2">
-            <span
-              class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">React
-              / Next.js</span>
-            <span
-              class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Node.js</span>
-          </div>
-        </div>
-
-        <!-- مشروع الأنظمة -->
-        <div
-          class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2"
-          data-category="system">
-          <div
-            class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
-            <span
-              class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">تحليل
-              البيانات</span>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-          <h3
-            class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">
-            نظام تنبؤ بالحوادث المرورية</h3>
-          <p class="text-sm opacity-75 mb-6 leading-relaxed">أداة للتعلم الآلي وتحليل البيانات تتنبأ بنسب الحوادث بدقة
-            متناهية بالاعتماد على الأرصاد الجوية وحالات الطرق.</p>
-          <div class="flex flex-wrap items-center gap-2">
-            <span
-              class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Python</span>
-            <span
-              class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Streamlit</span>
-          </div>
-        </div>
-
-        <!-- مشروع الأنظمة الثاني -->
-        <div
-          class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2"
-          data-category="system">
-          <div
-            class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
-            <span
-              class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">إدارة
-              القواعد</span>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-          </div>
-          <h3
-            class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">
-            أداة حماية وقواعد البيانات</h3>
-          <p class="text-sm opacity-75 mb-6 leading-relaxed">تطبيق مكتبي قوي لإجراء وإدارة وتأمين عمليات النسخ الاحتياطي
-            لقواعد البيانات الضخمة مع نظام استرداد آمن.</p>
-          <div class="flex flex-wrap items-center gap-2">
-            <span
-              class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">C#
-              / WPF</span>
-            <span
-              class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">SQL
-              Server</span>
-          </div>
-        </div>
-
-      </div>
+<section id="projects" class="py-20 md:py-32 px-6 md:px-12 border-t border-border/10 dark:border-border-dark/10">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center space-y-4 mb-16">
+      <h2 id="projects-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary dark:text-icon">
+        أعمال ومشاريع مختارة</h2>
+      <p id="projects-sub" class="text-xs md:text-secondary-size font-semibold uppercase tracking-wider text-secondary dark:text-icon/70">
+        تطبيقات وحلول رقمية فريدة تمت هندستها وتطويرها</p>
     </div>
-  </section>
+
+    <div class="flex flex-wrap justify-center gap-2 mb-12 md:mb-16">
+      <button onclick="filterProjects('all')" class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300" id="filter-btn-all">الكل</button>
+      <button onclick="filterProjects('web')" class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300" id="filter-btn-web">الويب</button>
+      <button onclick="filterProjects('system')" class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300" id="filter-btn-system">الأنظمة</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+      <div class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2" data-category="web">
+        <div class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
+          <span id="proj-card-title-1" class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">منصة حجوزات طبية</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 id="proj-title-1" class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">منصة حجوزات طبية متكاملة</h3>
+        <p id="proj-desc-1" class="text-sm opacity-75 mb-6 leading-relaxed">نظام متطور لحجز المواعيد وإدارة العيادات مع لوحات تحكم وتنبيهات فورية للأطباء والمرضى.</p>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">React / Next.js</span>
+          <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Node.js</span>
+        </div>
+      </div>
+
+      <div class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2" data-category="system">
+        <div class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
+          <span id="proj-card-title-2" class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">تحليل البيانات</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 id="proj-title-2" class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">نظام تنبؤ بالحوادث المرورية</h3>
+        <p id="proj-desc-2" class="text-sm opacity-75 mb-6 leading-relaxed">أداة للتعلم الآلي وتحليل البيانات تتنبأ بنسب الحوادث بدقة متناهية بالاعتماد على الأرصاد الجوية وحالات الطرق.</p>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Python</span>
+          <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Streamlit</span>
+        </div>
+      </div>
+
+      <div class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2" data-category="system">
+        <div class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
+          <span id="proj-card-title-3" class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">إدارة القواعد</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 id="proj-title-3" class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">أداة حماية وقواعد البيانات</h3>
+        <p id="proj-desc-3" class="text-sm opacity-75 mb-6 leading-relaxed">تطبيق مكتبي قوي لإجراء وإدارة وتأمين عمليات النسخ الاحتياطي لقواعد البيانات الضخمة مع نظام استرداد آمن.</p>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">C# / WPF</span>
+          <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">SQL Server</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ==================== 4. قسم القدرات والمهارات التقنية ==================== -->
   <section id="skills"

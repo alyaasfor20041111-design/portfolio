@@ -1,6 +1,7 @@
 // ==================== SCRIPTS ==================== //
 
 // --- كائن الترجمات المتكامل والمتقن باللغتين ---
+// --- كائن الترجمات المتكامل والمتقن باللغتين (محدث بالكامل مع قسم المشاريع) ---
 const translations = {
     ar: {
         logoTitle: "عليا عصفور",
@@ -17,18 +18,33 @@ const translations = {
         heroDesc: "أعمل على هندسة وبناء واجهات مستخدم متفردة وتطبيقات ويب متكاملة تدمج بين الأداء البرمجي فائق السرعة والمظهر الرقمي الأنيق والحديث.",
         heroBtnPrimary: "استعرض مشاريعي",
         heroBtnSecondary: "تواصل معي الآن",
+        
+        // قسم المشاريع (عربي)
         projectsHeading: "أعمال ومشاريع مختارة",
         projectsSub: "تطبيقات وحلول رقمية فريدة تمت هندستها وتطويرها",
+        filterAll: "الكل",
+        filterWeb: "الويب",
+        filterSystem: "الأنظمة",
+        projCardTitle1: "منصة حجوزات طبية",
+        projTitle1: "منصة حجوزات طبية متكاملة",
+        projDesc1: "نظام متطور لحجز المواعيد وإدارة العيادات مع لوحات تحكم وتنبيهات فورية للأطباء والمرضى.",
+        projCardTitle2: "تحليل البيانات",
+        projTitle2: "نظام تنبؤ بالحوادث المرورية",
+        projDesc2: "أداة للتعلم الآلي وتحليل البيانات تتنبأ بنسب الحوادث بدقة متناهية بالاعتماد على الأرصاد الجوية وحالات الطرق.",
+        projCardTitle3: "إدارة القواعد",
+        projTitle3: "أداة حماية وقواعد البيانات",
+        projDesc3: "تطبيق مكتبي قوي لإجراء وإدارة وتأمين عمليات النسخ الاحتياطي لقواعد البيانات الضخمة مع نظام استرداد آمن.",
+
         skillsHeading: "القدرات والمهارات التقنية",
         skillsSub: "انقري على المهارة مباشرة لزيارة موقعها الرسمي",
         timelineHeading: "مسيرتي المهنية والتعليمية",
         timelineSub: "رحلة تطوري وخبراتي في عالم التقنية البرمجية",
         timelineDate1: "2024 - الآن",
         timelineTitle1: "مطورة برمجيات مستقلة",
-        timelineDesc1: "هندسة وبناء واجهات مستخدم مخصصة ومطورة بالكامل لعملاء محليين ودوليين، وتحسين سرعة الأداء وملاءمة متطلبات محركات البحث بالاعتماد على Next.js وTailwind CSS.",
+        timelineDesc1: "هندسة وبناء واجهات مستخدم مخصصة ومطورة بالكامل لعملاء محليين ودوليين، وتحسين سرعة الأداء وملاءمة متمتطلبات محركات البحث بالاعتماد على Next.js وTailwind CSS.",
         timelineDate2: "2022 - 2024",
         timelineTitle2: "مساعد تقني ومطور نظم",
-        timelineDesc2: "تطوير تطبيقات مكتبية متقدمة وحماية قواعد البيانات الكبرى بالاعتماد على C# و SQL Server، وإنجاز منصات للتنبؤ وتحليل البيانات في بيئات ذكية متجاوبة.",
+        timelineDesc2: "تتطوير تطبيقات مكتبية متقدمة وحماية قواعد البيانات الكبرى بالاعتماد على C# و SQL Server، وإنجاز منصات للتنبؤ وتحليل البيانات في بيئات ذكية متجاوبة.",
         timelineDate3: "2018 - 2022",
         timelineTitle3: "بكالوريوس علوم الحاسب",
         timelineDesc3: "دراسة أكاديمية متكاملة شملت خوارزميات برمجية وهندسة النظم وحماية البيانات، مع التركيز على لغات التطوير الأساسية ومبادئ الـ Object-Oriented Programming.",
@@ -51,15 +67,30 @@ const translations = {
         navSkills: "Skills",
         navTimeline: "Evolution",
         navContact: "Contact",
-        langBtn: "AR",
+        langBtn: "العربية",
         statusText: "Available for Projects",
         heroBadge: "AVAILABLE FOR COMMISSIONS & FULL-TIME ROLES",
         heroTitle: 'I am Alya Asfor <br><span class="bg-gradient-to-r from-primary via-secondary to-icon bg-clip-text text-transparent font-light text-2xl sm:text-4xl md:text-6xl mt-4 block">Software Engineer</span>',
         heroDesc: "Engineering beautiful custom web architectures, visual-heavy layouts, and robust system APIs tailored for performance and usability.",
         heroBtnPrimary: "View Projects",
         heroBtnSecondary: "Let's Connect",
+        
+        // قسم المشاريع (إنجليزي)
         projectsHeading: "Featured Projects",
         projectsSub: "Digital solutions and production-ready architectures built with precision",
+        filterAll: "All",
+        filterWeb: "Web Apps",
+        filterSystem: "Systems",
+        projCardTitle1: "Medical Booking",
+        projTitle1: "Integrated Medical Reservation Platform",
+        projDesc1: "Advanced appointment scheduling and clinic management system with live tracking dashboards for doctors and patients.",
+        projCardTitle2: "Data Analytics",
+        projTitle2: "AI-Powered Traffic Accident Predictor",
+        projDesc2: "Machine learning analytical tool predicting accident frequencies based on live meteorological data and road telemetry.",
+        projCardTitle3: "Database Security",
+        projTitle3: "Relational Database Backup Vault",
+        projDesc3: "Robust desktop enterprise backup mechanism securely handling vast database streams with instant fallback nodes.",
+
         skillsHeading: "Technical Expertise",
         skillsSub: "Click any skill to visit its official technology website directly",
         timelineHeading: "Professional Evolution & CV",
@@ -147,7 +178,21 @@ const els = {
     contactBtn: document.getElementById('contact-btn'),
     footerText: document.getElementById('footer-text'),
     sidebarLogoTitle: document.getElementById('sidebar-logo-title'),
-sidebarLogoSubtitle: document.getElementById('sidebar-logo-subtitle'),
+    sidebarLogoSubtitle: document.getElementById('sidebar-logo-subtitle'),
+    
+    // مراجع مضافة لقسم تصفية وبطاقات المشاريع 🌟
+    filterBtnAll: document.getElementById('filter-btn-all'),
+    filterBtnWeb: document.getElementById('filter-btn-web'),
+    filterBtnSystem: document.getElementById('filter-btn-system'),
+    projCardTitle1: document.getElementById('proj-card-title-1'),
+    projTitle1: document.getElementById('proj-title-1'),
+    projDesc1: document.getElementById('proj-desc-1'),
+    projCardTitle2: document.getElementById('proj-card-title-2'),
+    projTitle2: document.getElementById('proj-title-2'),
+    projDesc2: document.getElementById('proj-desc-2'),
+    projCardTitle3: document.getElementById('proj-card-title-3'),
+    projTitle3: document.getElementById('proj-title-3'),
+    projDesc3: document.getElementById('proj-desc-3')
 };
 
 // --- منطق تبديل الوضع الداكن المطور ---
@@ -171,63 +216,78 @@ langToggleBtn.addEventListener('click', () => {
 
     const data = translations[currentLang];
 
-    els.logoTitle.textContent = data.logoTitle;
-    els.logoSubtitle.textContent = data.logoSubtitle;
+    // لوغو الهيدر والسايد بار
+    if (els.logoTitle) els.logoTitle.textContent = data.logoTitle;
+    if (els.logoSubtitle) els.logoSubtitle.textContent = data.logoSubtitle;
+    if (els.sidebarLogoTitle) els.sidebarLogoTitle.textContent = data.logoTitle;
+    if (els.sidebarLogoSubtitle) els.sidebarLogoSubtitle.textContent = data.logoSubtitle;
 
-    // روابط التنقل
-    els.navHome.textContent = data.navHome;
-    els.navProjects.textContent = data.navProjects;
-    els.navSkills.textContent = data.navSkills;
-    els.navTimeline.textContent = data.navTimeline;
-    els.navContact.textContent = data.navContact;
-    els.mobNavHome.textContent = data.navHome;
-    els.mobNavProjects.textContent = data.navProjects;
-    els.mobNavSkills.textContent = data.navSkills;
-    els.mobNavTimeline.textContent = data.navTimeline;
-    els.mobNavContact.textContent = data.navContact;
+    // روابط التنقل (شاشات الكمبيوتر)
+    if (els.navHome) els.navHome.textContent = data.navHome;
+    if (els.navProjects) els.navProjects.textContent = data.navProjects;
+    if (els.navSkills) els.navSkills.textContent = data.navSkills;
+    if (els.navTimeline) els.navTimeline.textContent = data.navTimeline;
+    if (els.navContact) els.navContact.textContent = data.navContact;
+
+    // روابط التنقل (شاشات الهواتف)
+    if (els.mobNavHome) els.mobNavHome.textContent = data.navHome;
+    if (els.mobNavProjects) els.mobNavProjects.textContent = data.navProjects;
+    if (els.mobNavSkills) els.mobNavSkills.textContent = data.navSkills;
+    if (els.mobNavTimeline) els.mobNavTimeline.textContent = data.navTimeline;
+    if (els.mobNavContact) els.mobNavContact.textContent = data.navContact;
 
     // حالة العمل
-    els.statusText.textContent = data.statusText;
+    if (els.statusText) els.statusText.textContent = data.statusText;
 
     // قسم الـ Hero
-    els.heroBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> ${data.heroBadge}`;
-    els.heroTitle.innerHTML = data.heroTitle;
-    els.heroDesc.textContent = data.heroDesc;
-    els.heroBtnPrimary.textContent = data.heroBtnPrimary;
-    els.heroBtnSecondary.textContent = data.heroBtnSecondary;
+    if (els.heroBadge) els.heroBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> ${data.heroBadge}`;
+    if (els.heroTitle) els.heroTitle.innerHTML = data.heroTitle;
+    if (els.heroDesc) els.heroDesc.textContent = data.heroDesc;
+    if (els.heroBtnPrimary) els.heroBtnPrimary.textContent = data.heroBtnPrimary;
+    if (els.heroBtnSecondary) els.heroBtnSecondary.textContent = data.heroBtnSecondary;
 
-    // قسم المشاريع والمهارات والتايم لاين
-    els.projectsHeading.textContent = data.projectsHeading;
-    els.projectsSub.textContent = data.projectsSub;
-    els.skillsHeading.textContent = data.skillsHeading;
-    els.skillsSub.textContent = data.skillsSub;
-    els.timelineHeading.textContent = data.timelineHeading;
-    els.timelineSub.textContent = data.timelineSub;
+    // قسم المشاريع (العناوين وأزرار الفلترة والبطاقات)
+    if (els.projectsHeading) els.projectsHeading.textContent = data.projectsHeading;
+    if (els.projectsSub) els.projectsSub.textContent = data.projectsSub;
+    if (els.filterBtnAll) els.filterBtnAll.textContent = data.filterAll;
+    if (els.filterBtnWeb) els.filterBtnWeb.textContent = data.filterWeb;
+    if (els.filterBtnSystem) els.filterBtnSystem.textContent = data.filterSystem;
+    if (els.projCardTitle1) els.projCardTitle1.textContent = data.projCardTitle1;
+    if (els.projTitle1) els.projTitle1.textContent = data.projTitle1;
+    if (els.projDesc1) els.projDesc1.textContent = data.projDesc1;
+    if (els.projCardTitle2) els.projCardTitle2.textContent = data.projCardTitle2;
+    if (els.projTitle2) els.projTitle2.textContent = data.projTitle2;
+    if (els.projDesc2) els.projDesc2.textContent = data.projDesc2;
+    if (els.projCardTitle3) els.projCardTitle3.textContent = data.projCardTitle3;
+    if (els.projTitle3) els.projTitle3.textContent = data.projTitle3;
+    if (els.projDesc3) els.projDesc3.textContent = data.projDesc3;
 
-    els.timelineDate1.textContent = data.timelineDate1;
-    els.timelineTitle1.textContent = data.timelineTitle1;
-    els.timelineDesc1.textContent = data.timelineDesc1;
-    els.timelineDate2.textContent = data.timelineDate2;
-    els.timelineTitle2.textContent = data.timelineTitle2;
-    els.timelineDesc2.textContent = data.timelineDesc2;
-    els.timelineDate3.textContent = data.timelineDate3;
-    els.timelineTitle3.textContent = data.timelineTitle3;
-    els.timelineDesc3.textContent = data.timelineDesc3;
+    // قسم المهارات والتايم لاين
+    if (els.skillsHeading) els.skillsHeading.textContent = data.skillsHeading;
+    if (els.skillsSub) els.skillsSub.textContent = data.skillsSub;
+    if (els.timelineHeading) els.timelineHeading.textContent = data.timelineHeading;
+    if (els.timelineSub) els.timelineSub.textContent = data.timelineSub;
+
+    if (els.timelineDate1) els.timelineDate1.textContent = data.timelineDate1;
+    if (els.timelineTitle1) els.timelineTitle1.textContent = data.timelineTitle1;
+    if (els.timelineDesc1) els.timelineDesc1.textContent = data.timelineDesc1;
+    if (els.timelineDate2) els.timelineDate2.textContent = data.timelineDate2;
+    if (els.timelineTitle2) els.timelineTitle2.textContent = data.timelineTitle2;
+    if (els.timelineDesc2) els.timelineDesc2.textContent = data.timelineDesc2;
+    if (els.timelineDate3) els.timelineDate3.textContent = data.timelineDate3;
+    if (els.timelineTitle3) els.timelineTitle3.textContent = data.timelineTitle3;
+    if (els.timelineDesc3) els.timelineDesc3.textContent = data.timelineDesc3;
 
     // قسم التواصل والفورم
-    els.contactHeading.textContent = data.contactHeading;
-    els.contactSub.textContent = data.contactSub;
-    els.labelName.textContent = data.labelName;
-    els.labelEmail.textContent = data.labelEmail;
-    els.labelMessage.textContent = data.labelMessage;
-    els.nameInput.placeholder = data.placeholderName;
-    els.messageInput.placeholder = data.placeholderMessage;
-    els.contactBtn.textContent = data.contactBtn;
-    els.footerText.textContent = data.footerText;
-
-    // الإضافة هنا لتحديث لوغو السايد بار أيضاً 🌟
-    els.sidebarLogoTitle.textContent = data.logoTitle;
-    els.sidebarLogoSubtitle.textContent = data.logoSubtitle;
+    if (els.contactHeading) els.contactHeading.textContent = data.contactHeading;
+    if (els.contactSub) els.contactSub.textContent = data.contactSub;
+    if (els.labelName) els.labelName.textContent = data.labelName;
+    if (els.labelEmail) els.labelEmail.textContent = data.labelEmail;
+    if (els.labelMessage) els.labelMessage.textContent = data.labelMessage;
+    if (els.nameInput) els.nameInput.placeholder = data.placeholderName;
+    if (els.messageInput) els.messageInput.placeholder = data.placeholderMessage;
+    if (els.contactBtn) els.contactBtn.textContent = data.contactBtn;
+    if (els.footerText) els.footerText.textContent = data.footerText;
 
     langToggleBtn.textContent = data.langBtn;
 });
