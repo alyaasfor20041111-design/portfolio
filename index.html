@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en" class="dark" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحة رئيسية</title>
+  <!-- font awesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" type="image/x-icon" href="src/images/icon.png" />
+  <link href="src/output.css" rel="stylesheet" />
+</head>
+
+
+  
+<body class="bg-background dark:bg-bg-dark font-primary text-primary dark:text-button-title transition-colors duration-500 antialiased selection:bg-card/40 selection:text-primary">
+
+  <!-- ==================== 1. الـ HEADER الفخم والمتكامل ==================== -->
+  <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-50 rounded-full backdrop-blur-xl bg-background/70 dark:bg-bg-dark/70 border border-border/20 dark:border-border-dark/20 transition-all duration-300 shadow-lg shadow-primary/5">
+    <!-- شريط تقدم القراءة في أسفل الهيدر -->
+    <div id="scroll-progress" class="absolute bottom-0 left-6 right-6 h-[2px] bg-secondary transition-all duration-100 rounded-full" style="width: 0%"></div>
+
+    <div class="px-6 md:px-10 h-20 flex items-center justify-between">
+      
+      <!-- اللوغو الاحترافي: الشعار واسم المهنة تحته مباشرة -->
+      <a href="#home" class="flex flex-col focus:outline-none group">
+        <span id="logo-title" class="font-bold text-primary dark:text-icon text-[24px] md:text-primary-size leading-none tracking-tight transition-transform duration-300 group-hover:scale-98">
+          عليا عصفور
+        </span>
+        <span id="logo-subtitle" class="text-[10px] md:text-secondary-size text-secondary dark:text-icon/80 font-semibold tracking-wider mt-0.5 transition-all duration-300 group-hover:opacity-100">
+          مطورة برمجيات
+        </span>
+      </a>
+
+      <!-- روابط التنقل السريع: تفاعلية كاملة مع تمييز دقيق -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#home" id="nav-home" class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">الرئيسية</a>
+        <a href="#projects" id="nav-projects" class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">المشاريع</a>
+        <a href="#skills" id="nav-skills" class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">المهارات</a>
+        <a href="#timeline" id="nav-timeline" class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">مسيرتي</a>
+        <a href="#contact" id="nav-contact" class="text-secondary-size font-bold text-button hover:text-button-hover dark:text-icon dark:hover:text-button-title uppercase tracking-wider relative py-2 transition-all after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary dark:after:bg-icon after:transition-all hover:after:w-full">اتصل بي</a>
+      </nav>
+
+      <!-- أدوات التحكم الجانبية الفاخرة -->
+      <div class="flex items-center gap-3">
+        <!-- مؤشر الحالة الحي الذكي للتواصل السريع -->
+        <div id="live-status" class="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full border border-border/20 bg-input/15 dark:bg-input-dark/30 text-[11px] font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-glow"></span>
+          <span id="status-text">متاحة للعمل البرمجي</span>
+        </div>
+
+        <!-- زر التبديل للوضع الداكن (تصميم هالو ناعم) -->
+        <button id="theme-toggle" class="p-2.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer" aria-label="Toggle Theme">
+          <svg id="theme-toggle-dark-icon" class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+          <svg id="theme-toggle-light-icon" class="w-4 h-4 fill-none stroke-current stroke-2 hidden" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38l1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38l1.59-1.59M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" />
+          </svg>
+        </button>
+
+        <!-- زر تبديل اللغة الفخم الكبسولي -->
+        <button id="lang-toggle" class="px-4 py-2 rounded-full text-secondary-size font-bold tracking-widest bg-button text-button-title hover:bg-button-hover active:scale-95 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 cursor-pointer w-12 flex justify-center border border-border/10 dark:border-border-dark/10">
+          EN
+        </button>
+
+        <!-- زر هامبرغر للهواتف بتأثير morphing متحرك -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer" aria-label="Toggle Mobile Menu">
+          <i id="mobile-icon" class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- القائمة الجانبية المنزلقة والزجاجية بالكامل للهواتف والتابلت -->
+  <div id="mobile-sidebar-backdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity duration-500 opacity-0"></div>
+  <aside id="mobile-sidebar" class="fixed top-0 right-0 h-full w-[80%] max-w-xs bg-background/95 dark:bg-bg-dark/95 border-l border-border/20 dark:border-border-dark/20 shadow-2xl z-50 backdrop-blur-xl translate-x-full transition-transform duration-500 ease-out flex flex-col justify-between p-8">
+    <div class="space-y-8">
+      <!-- هيدر السايد بار -->
+      <div class="flex items-center justify-between">
+        <span class="font-bold text-primary dark:text-icon text-[20px]">عليا عصفور</span>
+        <button id="sidebar-close" class="p-2 rounded-full hover:bg-input/10 dark:hover:bg-input-dark/20 text-primary dark:text-icon transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- روابط الملاحة مع تأخير أنيميشن -->
+      <nav class="flex flex-col space-y-4">
+        <a href="#home" id="mob-nav-home" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-1">الرئيسية</a>
+        <a href="#projects" id="mob-nav-projects" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-2">المشاريع</a>
+        <a href="#skills" id="mob-nav-skills" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-3">المهارات</a>
+        <a href="#timeline" id="mob-nav-timeline" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-4">مسيرتي</a>
+        <a href="#contact" id="mob-nav-contact" class="text-base font-bold text-button dark:text-icon p-3 rounded-2xl hover:bg-input/10 dark:hover:bg-input-dark/20 transition-all opacity-0 translate-x-4 delay-5">اتصل بي</a>
+      </nav>
+    </div>
+
+    <!-- تذييل السايد بار مع الساعة وحقوق الملكية -->
+    <div class="space-y-4">
+      <div id="local-time" class="text-[11px] font-semibold opacity-70 border-t border-border/10 pt-4 flex items-center gap-2">
+        <i class="fa-solid fa-clock"></i>
+        <span id="time-val">00:00:00 AM</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- مساحة وهمية موازية للهيدر لتفادي حجب المحتوى -->
+  <div class="h-28"></div>
+
+  <!-- ==================== 2. قسم الـ HERO الفخم جداً بتصميم تفاعلي متحرك ==================== -->
+  <section id="home" class="min-h-[90vh] flex items-center justify-center px-6 md:px-12 relative overflow-visible select-none">
+    <!-- شبكة الجزيئات المتحركة والتفاعلية في الخلفية -->
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    
+    <!-- إضاءة خلفية ناعمة هولوغرافية تتناغم مع حركتكِ -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-primary/10 dark:bg-icon/5 rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0 animate-pulse"></div>
+
+    <!-- شبكة التواصل الممتازة الجانبية (Orbital Social Dock) - مذهلة وغير اعتيادية -->
+    <div class="fixed left-6 top-1/2 -translate-y-1/2 z-30 hidden xl:flex flex-col gap-6 p-3 rounded-full border border-border/20 bg-background/60 dark:bg-bg-dark/60 backdrop-blur-md shadow-lg shadow-primary/5 hover:border-primary/40 hover:shadow-primary/10 transition-all duration-300">
+      <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" class="group relative w-12 h-12 rounded-full flex items-center justify-center border border-border/10 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-115 active:scale-90 hover:bg-button hover:text-button-title hover:shadow-lg transition-all duration-300" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span class="absolute right-14 bg-background dark:bg-bg-dark border border-border/20 px-3 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md shadow-primary/5">WhatsApp</span>
+      </a>
+      <a href="https://github.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="group relative w-12 h-12 rounded-full flex items-center justify-center border border-border/10 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-115 active:scale-90 hover:bg-button hover:text-button-title hover:shadow-lg transition-all duration-300" aria-label="GitHub">
+        <i class="fa-brands fa-github text-lg"></i>
+        <span class="absolute right-14 bg-background dark:bg-bg-dark border border-border/20 px-3 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md shadow-primary/5">GitHub</span>
+      </a>
+      <a href="https://instagram.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="group relative w-12 h-12 rounded-full flex items-center justify-center border border-border/10 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-115 active:scale-90 hover:bg-button hover:text-button-title hover:shadow-lg transition-all duration-300" aria-label="Instagram">
+        <i class="fa-brands fa-instagram text-lg"></i>
+        <span class="absolute right-14 bg-background dark:bg-bg-dark border border-border/20 px-3 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md shadow-primary/5">Instagram</span>
+      </a>
+      <a href="https://facebook.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="group relative w-12 h-12 rounded-full flex items-center justify-center border border-border/10 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon hover:scale-115 active:scale-90 hover:bg-button hover:text-button-title hover:shadow-lg transition-all duration-300" aria-label="Facebook">
+        <i class="fa-brands fa-facebook text-lg"></i>
+        <span class="absolute right-14 bg-background dark:bg-bg-dark border border-border/20 px-3 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md shadow-primary/5">Facebook</span>
+      </a>
+    </div>
+
+    <div class="max-w-4xl text-center py-8 space-y-8 relative z-10 overflow-visible">
+      <div id="hero-badge" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-secondary-size font-bold tracking-widest bg-card/10 dark:bg-card-dark/25 text-primary dark:text-icon border border-border/20 dark:border-border-dark/20 glow-effect backdrop-blur-md">
+        <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+        متاح للعمل وتطوير البرمجيات المبتكرة
+      </div>
+      
+      <!-- تحسين تباعد الأسطر لظهور الخط بشكل كامل وبلا أي أخطاء أو قص -->
+      <h1 id="hero-title" class="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight text-primary dark:text-button-title leading-normal md:leading-normal py-4 block overflow-visible">
+        أنا عليا عصفور <br>
+        <span id="hero-title-sub" class="bg-gradient-to-r from-primary via-secondary to-icon bg-clip-text text-transparent font-light text-2xl sm:text-4xl md:text-6xl mt-4 block py-2">
+          مطورة برمجيات
+        </span>
+      </h1>
+      
+      <p id="hero-desc" class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg opacity-85 leading-relaxed font-light px-4">
+        أعمل على هندسة وبناء واجهات مستخدم متفردة وتطبيقات ويب متكاملة تدمج بين الأداء البرمجي فائق السرعة والمظهر الرقمي الأنيق والحديث.
+      </p>
+
+      <!-- الأيقونات الاجتماعية الفخمة في الهيرو للهواتف والتابلت -->
+      <div class="flex xl:hidden justify-center gap-6 text-xl py-2">
+        <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title hover:scale-110 active:scale-95 transition-all duration-300" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://github.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title hover:scale-110 active:scale-95 transition-all duration-300" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://instagram.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title hover:scale-110 active:scale-95 transition-all duration-300" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title hover:scale-110 active:scale-95 transition-all duration-300" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
+        <a href="#projects" id="hero-btn-primary" class="w-full sm:w-auto px-8 py-4 rounded-full text-center font-bold bg-button text-button-title hover:bg-button-hover active:scale-98 hover:shadow-xl hover:shadow-primary/30 dark:hover:shadow-icon/30 transition-all duration-300">استعرض مشاريعي</a>
+        <a href="#contact" id="hero-btn-secondary" class="w-full sm:w-auto px-8 py-4 rounded-full text-center font-bold border border-border dark:border-border-dark text-button hover:bg-input/20 dark:text-icon dark:hover:bg-input-dark/20 active:scale-98 transition-all duration-300 backdrop-blur-sm">تواصل معي الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. قسم المشاريع الفخم والتفاعلي ==================== -->
+  <section id="projects" class="py-20 md:py-32 px-6 md:px-12 border-t border-border/10 dark:border-border-dark/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center space-y-4 mb-16">
+        <h2 id="projects-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary dark:text-icon">أعمال ومشاريع مختارة</h2>
+        <p id="projects-sub" class="text-xs md:text-secondary-size font-semibold uppercase tracking-wider text-secondary dark:text-icon/70">تطبيقات وحلول رقمية فريدة تمت هندستها وتطويرها</p>
+      </div>
+
+      <!-- أزرار التصفية المتطورة -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12 md:mb-16">
+        <button onclick="filterProjects('all')" class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300" id="filter-btn-all">الكل</button>
+        <button onclick="filterProjects('web')" class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300" id="filter-btn-web">الويب</button>
+        <button onclick="filterProjects('system')" class="px-5 py-2.5 rounded-full text-xs md:text-secondary-size font-bold cursor-pointer border border-border/20 dark:border-border-dark/20 bg-card/10 dark:bg-card-dark/20 hover:bg-button hover:text-button-title dark:hover:bg-button dark:hover:text-button-title transition-all duration-300" id="filter-btn-system">الأنظمة</button>
+      </div>
+      
+      <!-- شبكة بطاقات المشاريع الفخمة -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
+        <!-- مشروع الويب -->
+        <div class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2" data-category="web">
+          <div class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
+            <span class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">منصة حجوزات طبية</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">منصة حجوزات طبية متكاملة</h3>
+          <p class="text-sm opacity-75 mb-6 leading-relaxed">نظام متطور لحجز المواعيد وإدارة العيادات مع لوحات تحكم وتنبيهات فورية للأطباء والمرضى.</p>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">React / Next.js</span>
+            <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Node.js</span>
+          </div>
+        </div>
+
+        <!-- مشروع الأنظمة -->
+        <div class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2" data-category="system">
+          <div class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
+            <span class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">تحليل البيانات</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">نظام تنبؤ بالحوادث المرورية</h3>
+          <p class="text-sm opacity-75 mb-6 leading-relaxed">أداة للتعلم الآلي وتحليل البيانات تتنبأ بنسب الحوادث بدقة متناهية بالاعتماد على الأرصاد الجوية وحالات الطرق.</p>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Python</span>
+            <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">Streamlit</span>
+          </div>
+        </div>
+
+        <!-- مشروع الأنظمة الثاني -->
+        <div class="project-card group rounded-3xl p-6 bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-500 hover:-translate-y-2" data-category="system">
+          <div class="h-48 md:h-56 w-full rounded-2xl bg-card/20 dark:bg-card-dark/50 mb-6 overflow-hidden flex items-center justify-center border border-border/10 dark:border-border-dark/10 relative">
+            <span class="text-primary dark:text-icon font-bold text-lg md:text-xl uppercase tracking-widest z-10 text-center px-4">إدارة القواعد</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-icon transition-colors">أداة حماية وقواعد البيانات</h3>
+          <p class="text-sm opacity-75 mb-6 leading-relaxed">تطبيق مكتبي قوي لإجراء وإدارة وتأمين عمليات النسخ الاحتياطي لقواعد البيانات الضخمة مع نظام استرداد آمن.</p>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">C# / WPF</span>
+            <span class="text-[10px] px-3.5 py-1.5 rounded-full border border-border/20 dark:border-border-dark/20 bg-input/10 dark:bg-input-dark/20 text-primary dark:text-icon font-bold uppercase">SQL Server</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. قسم القدرات والمهارات التقنية ==================== -->
+  <section id="skills" class="py-20 md:py-32 px-6 md:px-12 bg-card/5 dark:bg-card-dark/10 border-t border-border/10 dark:border-border-dark/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center space-y-4 mb-16">
+        <h2 id="skills-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary dark:text-icon">القدرات والمهارات التقنية</h2>
+        <p id="skills-sub" class="text-xs md:text-secondary-size font-semibold uppercase tracking-wider text-secondary dark:text-icon/70">انقري على المهارة مباشرة لزيارة موقعها الرسمي</p>
+      </div>
+
+      <!-- المهارات التفاعلية المباشرة كبطاقات فخمة مع روابط رسمية -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        
+        <!-- 1. HTML5 -->
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-brands fa-html5 text-4xl md:text-5xl text-[#E34F26] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">HTML5</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">W3C Standard</span>
+        </a>
+
+        <!-- 2. Tailwind CSS -->
+        <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-solid fa-wind text-4xl md:text-5xl text-[#38BDF8] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">Tailwind CSS</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">Utility-First</span>
+        </a>
+
+        <!-- 3. JavaScript -->
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-brands fa-js text-4xl md:text-5xl text-[#F7DF1E] mb-4 rounded bg-black/10"></i>
+          <span class="font-bold text-xs md:text-sm">JavaScript</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">ES6 Core</span>
+        </a>
+
+        <!-- 4. TypeScript -->
+        <a href="https://www.typescriptlang.org" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-solid fa-circle-nodes text-4xl md:text-5xl text-[#3178C6] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">TypeScript</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">Type Safety</span>
+        </a>
+
+        <!-- 5. React.js -->
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-brands fa-react text-4xl md:text-5xl text-[#61DAFB] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">React.js</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">Component UI</span>
+        </a>
+
+        <!-- 6. Next.js -->
+        <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-solid fa-n text-4xl md:text-5xl text-primary dark:text-icon mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">Next.js</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">SSR Framework</span>
+        </a>
+
+        <!-- 7. Python -->
+        <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-brands fa-python text-4xl md:text-5xl text-[#3776AB] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">Python</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">AI & Logic</span>
+        </a>
+
+        <!-- 8. SQL Server -->
+        <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-solid fa-database text-4xl md:text-5xl text-[#CC292B] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">SQL Server</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">Data Storage</span>
+        </a>
+
+        <!-- 9. C# / WPF -->
+        <a href="https://dotnet.microsoft.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-solid fa-code text-4xl md:text-5xl text-[#239120] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">C# / WPF</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">Desktop Apps</span>
+        </a>
+
+        <!-- 10. Git -->
+        <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center p-6 rounded-3xl border border-border/20 dark:border-border-dark/20 bg-background dark:bg-bg-dark/80 text-center hover:border-primary dark:hover:border-icon hover:scale-105 active:scale-98 transition-all duration-300 shadow-sm">
+          <i class="fa-brands fa-git-alt text-4xl md:text-5xl text-[#F05032] mb-4"></i>
+          <span class="font-bold text-xs md:text-sm">Git</span>
+          <span class="text-[9px] md:text-[10px] text-secondary mt-1 tracking-wider uppercase opacity-70">Version Control</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. قسم مسيرة التطور (CV / Timeline) - تصميم فائق الاستجابة والخلو من الأخطاء ==================== -->
+  <section id="timeline" class="py-20 md:py-32 px-6 md:px-12 border-t border-border/10 dark:border-border-dark/10">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center space-y-4 mb-20">
+        <h2 id="timeline-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary dark:text-icon">مسيرتي المهنية والتعليمية</h2>
+        <p id="timeline-sub" class="text-xs md:text-secondary-size font-semibold uppercase tracking-wider text-secondary dark:text-icon/70">رحلة تطوري وخبراتي في عالم التقنية البرمجية</p>
+      </div>
+
+      <!-- المخطط الزمني المطور: خط ثابت لا ينقطع، متجاوب تماماً، يعتمد على الخصائص المنطقية للاتجاهات -->
+      <div class="relative border-s-2 border-border/30 dark:border-border-dark/30 ms-4 md:ms-10 space-y-12">
+        
+        <!-- المرحلة 1 -->
+        <div class="relative ps-8 md:ps-12 group">
+          <!-- عقدة الخط الزمني المتفاعلة تلقائياً -->
+          <div class="absolute start-0 -translate-x-1/2 top-2 w-5 h-5 rounded-full border-4 border-background dark:border-bg-dark bg-primary dark:bg-icon shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-125"></div>
+          
+          <div class="bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 rounded-3xl p-6 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-300 shadow-sm">
+            <span class="inline-block px-3 py-1 rounded-xl bg-primary/10 dark:bg-icon/10 text-primary dark:text-icon text-[11px] font-bold mb-3" id="timeline-date-1">2024 - الآن</span>
+            <h3 class="text-lg md:text-xl font-bold mb-2 text-primary dark:text-icon" id="timeline-title-1">مطورة برمجيات مستقلة</h3>
+            <p class="text-sm opacity-80 leading-relaxed" id="timeline-desc-1">هندسة وبناء واجهات مستخدم مخصصة ومطورة بالكامل لعملاء محليين ودوليين، وتحسين سرعة الأداء وملاءمة متطلبات محركات البحث بالاعتماد على Next.js وTailwind CSS.</p>
+          </div>
+        </div>
+
+        <!-- المرحلة 2 -->
+        <div class="relative ps-8 md:ps-12 group">
+          <!-- عقدة الخط الزمني المتفاعلة تلقائياً -->
+          <div class="absolute start-0 -translate-x-1/2 top-2 w-5 h-5 rounded-full border-4 border-background dark:border-bg-dark bg-secondary dark:bg-icon shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-125"></div>
+          
+          <div class="bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 rounded-3xl p-6 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-300 shadow-sm">
+            <span class="inline-block px-3 py-1 rounded-xl bg-secondary/10 dark:bg-icon/10 text-secondary dark:text-icon text-[11px] font-bold mb-3" id="timeline-date-2">2022 - 2024</span>
+            <h3 class="text-lg md:text-xl font-bold mb-2 text-primary dark:text-icon" id="timeline-title-2">مساعد تقني ومطور نظم</h3>
+            <p class="text-sm opacity-80 leading-relaxed" id="timeline-desc-2">تطوير تطبيقات مكتبية متقدمة وحماية قواعد البيانات الكبرى بالاعتماد على C# و SQL Server، وإنجاز منصات للتنبؤ وتحليل البيانات في بيئات ذكية متجاوبة.</p>
+          </div>
+        </div>
+
+        <!-- المرحلة 3 -->
+        <div class="relative ps-8 md:ps-12 group">
+          <!-- عقدة الخط الزمني المتفاعلة تلقائياً -->
+          <div class="absolute start-0 -translate-x-1/2 top-2 w-5 h-5 rounded-full border-4 border-background dark:border-bg-dark bg-primary dark:bg-icon shadow-md shadow-primary/20 transition-transform duration-300 group-hover:scale-125"></div>
+          
+          <div class="bg-card/5 dark:bg-card-dark/30 border border-border/20 dark:border-border-dark/20 rounded-3xl p-6 hover:border-primary/50 dark:hover:border-icon/50 transition-all duration-300 shadow-sm">
+            <span class="inline-block px-3 py-1 rounded-xl bg-primary/10 dark:bg-icon/10 text-primary dark:text-icon text-[11px] font-bold mb-3" id="timeline-date-3">2018 - 2022</span>
+            <h3 class="text-lg md:text-xl font-bold mb-2 text-primary dark:text-icon" id="timeline-title-3">بكالوريوس علوم الحاسب</h3>
+            <p class="text-sm opacity-80 leading-relaxed" id="timeline-desc-3">دراسة أكاديمية متكاملة شملت خوارزميات برمجية وهندسة النظم وحماية البيانات، مع التركيز على لغات التطوير الأساسية ومبادئ الـ Object-Oriented Programming.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. قسم الاتصال الفخم بحقول إدخال ذكية ==================== -->
+  <section id="contact" class="py-20 md:py-32 px-6 md:px-12 border-t border-border/10 dark:border-border-dark/10">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center space-y-4 mb-16">
+        <h2 id="contact-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary dark:text-icon">دعنا نعمل معاً</h2>
+        <p id="contact-sub" class="text-xs md:text-secondary-size font-semibold uppercase tracking-wider text-secondary dark:text-icon/70">تواصل معي لمناقشة فكرة مشروعك القادم أو لبناء شراكة متميزة</p>
+      </div>
+
+      <!-- فورم تفاعلي مصمم بالكامل بالاعتماد على كلاسات الـ input و ألوانك المحددة -->
+      <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+        <div>
+          <label for="name" class="block text-secondary-size font-bold mb-2 uppercase tracking-wide opacity-80" id="label-name">الاسم الكريم</label>
+          <input 
+            type="text" 
+            id="name" 
+            required
+            class="w-full px-5 py-4 rounded-2xl border border-border/40 dark:border-border-dark/40 bg-input/10 dark:bg-input-dark/30 text-primary dark:text-button-title focus:outline-none focus:border-primary dark:focus:border-icon transition-colors duration-300"
+            placeholder="مثال: أحمد مصطفى"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-secondary-size font-bold mb-2 uppercase tracking-wide opacity-80" id="label-email">البريد الإلكتروني</label>
+          <input 
+            type="email" 
+            id="email" 
+            required
+            class="w-full px-5 py-4 rounded-2xl border border-border/40 dark:border-border-dark/40 bg-input/10 dark:bg-input-dark/30 text-primary dark:text-button-title focus:outline-none focus:border-primary dark:focus:border-icon transition-colors duration-300"
+            placeholder="example@domain.com"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-secondary-size font-bold mb-2 uppercase tracking-wide opacity-80" id="label-message">تفاصيل الرسالة أو المشروع</label>
+          <textarea 
+            id="message" 
+            rows="5"
+            required
+            class="w-full px-5 py-4 rounded-2xl border border-border/40 dark:border-border-dark/40 bg-input/10 dark:bg-input-dark/30 text-primary dark:text-button-title focus:outline-none focus:border-primary dark:focus:border-icon transition-colors duration-300 resize-none"
+            placeholder="اكتب هنا تفاصيل الفكرة أو الاستفسار..."
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full py-4 rounded-2xl font-bold bg-button text-button-title hover:bg-button-hover active:scale-98 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
+        >
+          <span id="contact-btn">إرسال الرسالة الآن</span>
+        </button>
+      </form>
+      
+      <!-- بوكس رسالة النجاح التفاعلي المخصص لمنع استخدام alert() -->
+      <div id="success-box" class="hidden mt-6 p-4 rounded-2xl bg-card/20 dark:bg-card-dark/30 border border-border/50 text-center font-bold text-primary dark:text-icon">
+        🎉 شكراً لك! تم إرسال رسالتك بنجاح وسأرد عليكِ في أقرب وقت.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 border-t border-border/10 dark:border-border-dark/10 text-center text-[10px] tracking-widest uppercase opacity-75">
+    <div class="flex justify-center gap-6 text-xl mb-6">
+      <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title transition-colors" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://github.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title transition-colors" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://instagram.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title transition-colors" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/alyaasfor" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary dark:text-icon dark:hover:text-button-title transition-colors" aria-label="Facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+    </div>
+    <span id="footer-text">© 2026 عليا عصفور. جميع الحقوق محفوظة ومحمية.</span>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // --- كائن الترجمات المتكامل والمتقن باللغتين ---
+    const translations = {
+      ar: {
+        logoTitle: "عليا عصفور",
+        logoSubtitle: "مطورة برمجيات",
+        navHome: "الرئيسية",
+        navProjects: "المشاريع",
+        navSkills: "المهارات",
+        navTimeline: "مسيرتي",
+        navContact: "اتصل بي",
+        langBtn: "EN",
+        statusText: "متاحة للعمل البرمجي",
+        heroBadge: "متاح للعمل وتطوير البرمجيات المبتكرة",
+        heroTitle: 'أنا عليا عصفور <br><span class="bg-gradient-to-r from-primary via-secondary to-icon bg-clip-text text-transparent font-light text-2xl sm:text-4xl md:text-6xl mt-4 block">مطورة برمجيات</span>',
+        heroDesc: "أعمل على هندسة وبناء واجهات مستخدم متفردة وتطبيقات ويب متكاملة تدمج بين الأداء البرمجي فائق السرعة والمظهر الرقمي الأنيق والحديث.",
+        heroBtnPrimary: "استعرض مشاريعي",
+        heroBtnSecondary: "تواصل معي الآن",
+        projectsHeading: "أعمال ومشاريع مختارة",
+        projectsSub: "تطبيقات وحلول رقمية فريدة تمت هندستها وتطويرها",
+        skillsHeading: "القدرات والمهارات التقنية",
+        skillsSub: "انقري على المهارة مباشرة لزيارة موقعها الرسمي",
+        timelineHeading: "مسيرتي المهنية والتعليمية",
+        timelineSub: "رحلة تطوري وخبراتي في عالم التقنية البرمجية",
+        timelineDate1: "2024 - الآن",
+        timelineTitle1: "مطورة برمجيات مستقلة",
+        timelineDesc1: "هندسة وبناء واجهات مستخدم مخصصة ومطورة بالكامل لعملاء محليين ودوليين، وتحسين سرعة الأداء وملاءمة متطلبات محركات البحث بالاعتماد على Next.js وTailwind CSS.",
+        timelineDate2: "2022 - 2024",
+        timelineTitle2: "مساعد تقني ومطور نظم",
+        timelineDesc2: "تطوير تطبيقات مكتبية متقدمة وحماية قواعد البيانات الكبرى بالاعتماد على C# و SQL Server، وإنجاز منصات للتنبؤ وتحليل البيانات في بيئات ذكية متجاوبة.",
+        timelineDate3: "2018 - 2022",
+        timelineTitle3: "بكالوريوس علوم الحاسب",
+        timelineDesc3: "دراسة أكاديمية متكاملة شملت خوارزميات برمجية وهندسة النظم وحماية البيانات، مع التركيز على لغات التطوير الأساسية ومبادئ الـ Object-Oriented Programming.",
+        contactHeading: "دعنا نعمل معاً",
+        contactSub: "تواصل معي لمناقشة فكرة مشروعك القادم أو لبناء شراكة متميزة",
+        labelName: "الاسم الكريم",
+        labelEmail: "البريد الإلكتروني",
+        labelMessage: "تفاصيل الرسالة أو المشروع",
+        placeholderName: "مثال: أحمد مصطفى",
+        placeholderMessage: "اكتب هنا تفاصيل الفكرة أو الاستفسار...",
+        contactBtn: "إرسال الرسالة الآن",
+        successText: "🎉 شكراً لك! تم إرسال رسالتك بنجاح وسأرد عليكِ في أقرب وقت.",
+        footerText: "© 2026 عليا عصفور. جميع الحقوق محفوظة ومحمية."
+      },
+      en: {
+        logoTitle: "Alya Asfor",
+        logoSubtitle: "Software Developer",
+        navHome: "Home",
+        navProjects: "Projects",
+        navSkills: "Skills",
+        navTimeline: "Evolution",
+        navContact: "Contact",
+        langBtn: "العربية",
+        statusText: "Available for Projects",
+        heroBadge: "AVAILABLE FOR COMMISSIONS & FULL-TIME ROLES",
+        heroTitle: 'I am Alya Asfor <br><span class="bg-gradient-to-r from-primary via-secondary to-icon bg-clip-text text-transparent font-light text-2xl sm:text-4xl md:text-6xl mt-4 block">Software Engineer</span>',
+        heroDesc: "Engineering beautiful custom web architectures, visual-heavy layouts, and robust system APIs tailored for performance and usability.",
+        heroBtnPrimary: "View Projects",
+        heroBtnSecondary: "Let's Connect",
+        projectsHeading: "Featured Projects",
+        projectsSub: "Digital solutions and production-ready architectures built with precision",
+        skillsHeading: "Technical Expertise",
+        skillsSub: "Click any skill to visit its official technology website directly",
+        timelineHeading: "Professional Evolution & CV",
+        timelineSub: "My educational journey and professional tech expertise",
+        timelineDate1: "2024 - Present",
+        timelineTitle1: "Freelance Software Engineer",
+        timelineDesc1: "Architecting and engineering customized web portals for global clients, focusing on SEO optimization and performance optimization with Next.js and Tailwind CSS.",
+        timelineDate2: "2022 - 2024",
+        timelineTitle2: "Junior Database & Systems Developer",
+        timelineDesc2: "Constructed desktop application logic, maintained secure relational databases with WPF, SQL Server, and developed machine learning models.",
+        timelineDate3: "2018 - 2022",
+        timelineTitle3: "B.Sc. in Computer Science",
+        timelineDesc3: "Rigorous academic study focusing on system architecture, database administration, algorithmic efficiency, and object-oriented paradigms.",
+        contactHeading: "Let's Create Together",
+        contactSub: "Reach out to discuss your upcoming project or engineering collaborations",
+        labelName: "Your Name",
+        labelEmail: "Email Address",
+        labelMessage: "Project Details or Message",
+        placeholderName: "e.g. John Doe",
+        placeholderMessage: "Write details about your vision, timeline, or inquiries here...",
+        contactBtn: "Send Message Now",
+        successText: "🎉 Thank you! Your message has been sent successfully. I will reach back soon.",
+        footerText: "© 2026 Alya Asfor. All rights reserved."
+      }
+    };
+
+    let currentLang = 'ar';
+
+    // مراجع الـ DOM
+    const htmlElem = document.documentElement;
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const langToggleBtn = document.getElementById('lang-toggle');
+    const scrollProgress = document.getElementById('scroll-progress');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+    const mobileSidebarBackdrop = document.getElementById('mobile-sidebar-backdrop');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const mobileIcon = document.getElementById('mobile-icon');
+    const successBox = document.getElementById('success-box');
+    const timeVal = document.getElementById('time-val');
+
+    const els = {
+      logoTitle: document.getElementById('logo-title'),
+      logoSubtitle: document.getElementById('logo-subtitle'),
+      navHome: document.getElementById('nav-home'),
+      navProjects: document.getElementById('nav-projects'),
+      navSkills: document.getElementById('nav-skills'),
+      navTimeline: document.getElementById('nav-timeline'),
+      navContact: document.getElementById('nav-contact'),
+      mobNavHome: document.getElementById('mob-nav-home'),
+      mobNavProjects: document.getElementById('mob-nav-projects'),
+      mobNavSkills: document.getElementById('mob-nav-skills'),
+      mobNavTimeline: document.getElementById('mob-nav-timeline'),
+      mobNavContact: document.getElementById('mob-nav-contact'),
+      statusText: document.getElementById('status-text'),
+      heroBadge: document.getElementById('hero-badge'),
+      heroTitle: document.getElementById('hero-title'),
+      heroDesc: document.getElementById('hero-desc'),
+      heroBtnPrimary: document.getElementById('hero-btn-primary'),
+      heroBtnSecondary: document.getElementById('hero-btn-secondary'),
+      projectsHeading: document.getElementById('projects-heading'),
+      projectsSub: document.getElementById('projects-sub'),
+      skillsHeading: document.getElementById('skills-heading'),
+      skillsSub: document.getElementById('skills-sub'),
+      timelineHeading: document.getElementById('timeline-heading'),
+      timelineSub: document.getElementById('timeline-sub'),
+      timelineDate1: document.getElementById('timeline-date-1'),
+      timelineTitle1: document.getElementById('timeline-title-1'),
+      timelineDesc1: document.getElementById('timeline-desc-1'),
+      timelineDate2: document.getElementById('timeline-date-2'),
+      timelineTitle2: document.getElementById('timeline-title-2'),
+      timelineDesc2: document.getElementById('timeline-desc-2'),
+      timelineDate3: document.getElementById('timeline-date-3'),
+      timelineTitle3: document.getElementById('timeline-title-3'),
+      timelineDesc3: document.getElementById('timeline-desc-3'),
+      contactHeading: document.getElementById('contact-heading'),
+      contactSub: document.getElementById('contact-sub'),
+      labelName: document.getElementById('label-name'),
+      labelEmail: document.getElementById('label-email'),
+      labelMessage: document.getElementById('label-message'),
+      nameInput: document.getElementById('name'),
+      messageInput: document.getElementById('message'),
+      contactBtn: document.getElementById('contact-btn'),
+      footerText: document.getElementById('footer-text')
+    };
+
+    // --- منطق تبديل الوضع الداكن المطور ---
+    themeToggleBtn.addEventListener('click', () => {
+      htmlElem.classList.toggle('dark');
+      if (htmlElem.classList.contains('dark')) {
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+      } else {
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+      }
+    });
+
+    // --- منطق تبديل اللغات السلس والمحكم ---
+    langToggleBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      
+      htmlElem.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      htmlElem.lang = currentLang;
+
+      const data = translations[currentLang];
+
+      els.logoTitle.textContent = data.logoTitle;
+      els.logoSubtitle.textContent = data.logoSubtitle;
+      
+      // روابط التنقل
+      els.navHome.textContent = data.navHome;
+      els.navProjects.textContent = data.navProjects;
+      els.navSkills.textContent = data.navSkills;
+      els.navTimeline.textContent = data.navTimeline;
+      els.navContact.textContent = data.navContact;
+      els.mobNavHome.textContent = data.navHome;
+      els.mobNavProjects.textContent = data.navProjects;
+      els.mobNavSkills.textContent = data.navSkills;
+      els.mobNavTimeline.textContent = data.navTimeline;
+      els.mobNavContact.textContent = data.navContact;
+
+      // حالة العمل
+      els.statusText.textContent = data.statusText;
+
+      // قسم الـ Hero
+      els.heroBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> ${data.heroBadge}`;
+      els.heroTitle.innerHTML = data.heroTitle;
+      els.heroDesc.textContent = data.heroDesc;
+      els.heroBtnPrimary.textContent = data.heroBtnPrimary;
+      els.heroBtnSecondary.textContent = data.heroBtnSecondary;
+
+      // قسم المشاريع والمهارات والتايم لاين
+      els.projectsHeading.textContent = data.projectsHeading;
+      els.projectsSub.textContent = data.projectsSub;
+      els.skillsHeading.textContent = data.skillsHeading;
+      els.skillsSub.textContent = data.skillsSub;
+      els.timelineHeading.textContent = data.timelineHeading;
+      els.timelineSub.textContent = data.timelineSub;
+      
+      els.timelineDate1.textContent = data.timelineDate1;
+      els.timelineTitle1.textContent = data.timelineTitle1;
+      els.timelineDesc1.textContent = data.timelineDesc1;
+      els.timelineDate2.textContent = data.timelineDate2;
+      els.timelineTitle2.textContent = data.timelineTitle2;
+      els.timelineDesc2.textContent = data.timelineDesc2;
+      els.timelineDate3.textContent = data.timelineDate3;
+      els.timelineTitle3.textContent = data.timelineTitle3;
+      els.timelineDesc3.textContent = data.timelineDesc3;
+
+      // قسم التواصل والفورم
+      els.contactHeading.textContent = data.contactHeading;
+      els.contactSub.textContent = data.contactSub;
+      els.labelName.textContent = data.labelName;
+      els.labelEmail.textContent = data.labelEmail;
+      els.labelMessage.textContent = data.labelMessage;
+      els.nameInput.placeholder = data.placeholderName;
+      els.messageInput.placeholder = data.placeholderMessage;
+      els.contactBtn.textContent = data.contactBtn;
+      els.footerText.textContent = data.footerText;
+
+      langToggleBtn.textContent = data.langBtn;
+    });
+
+    // --- تشغيل حركة شريط التقدم وقفل القائمة في الهيدر ---
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      scrollProgress.style.width = scrolled + "%";
+    });
+
+    // --- فتح وإغلاق القائمة الجانبية المنزلقة المتطورة (Sidebar) ---
+    function openSidebar() {
+      mobileSidebarBackdrop.classList.remove('hidden');
+      setTimeout(() => {
+        mobileSidebarBackdrop.classList.remove('opacity-0');
+        mobileSidebarBackdrop.classList.add('opacity-100');
+      }, 50);
+
+      // سحب دائماً من اليمين بشكل متناسق ومستقر
+      mobileSidebar.classList.remove('translate-x-full');
+      mobileSidebar.classList.add('translate-x-0');
+
+      // حركة العناصر المتدرجة داخل السايد بار
+      const navLinks = mobileSidebar.querySelectorAll('nav a');
+      navLinks.forEach((link) => {
+        link.classList.remove('opacity-0', 'translate-x-4');
+        link.classList.add('opacity-100', 'translate-x-0');
+      });
+    }
+
+    function closeSidebar() {
+      mobileSidebarBackdrop.classList.remove('opacity-100');
+      mobileSidebarBackdrop.classList.add('opacity-0');
+      setTimeout(() => {
+        mobileSidebarBackdrop.classList.add('hidden');
+      }, 500);
+
+      mobileSidebar.classList.remove('translate-x-0');
+      mobileSidebar.classList.add('translate-x-full');
+
+      const navLinks = mobileSidebar.querySelectorAll('nav a');
+      navLinks.forEach((link) => {
+        link.classList.add('opacity-0', 'translate-x-4');
+        link.classList.remove('opacity-100', 'translate-x-0');
+      });
+    }
+
+    mobileMenuToggle.addEventListener('click', openSidebar);
+    sidebarClose.addEventListener('click', closeSidebar);
+    mobileSidebarBackdrop.addEventListener('click', closeSidebar);
+
+    // إغلاق قائمة الجوال بمجرد النقر على الرابط لتجربة تصفح رائعة
+    document.querySelectorAll('#mobile-sidebar nav a').forEach(link => {
+      link.addEventListener('click', closeSidebar);
+    });
+
+    // --- تحديث ساعة السايد بار المحلية حية بدقة ---
+    function updateClock() {
+      const now = new Date();
+      timeVal.textContent = now.toLocaleTimeString(currentLang === 'ar' ? 'ar-EG' : 'en-US');
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // ==========================================
+    // --- برمجة الخلفية النجمية التفاعلية المتطورة ---
+    // ==========================================
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    const heroSection = document.getElementById('home');
+
+    let particlesArray = [];
+    let numberOfParticles = 80;
+
+    // تمثيل الماوس لتوفير استجابة تفاعلية عند الاقتراب
+    const mouse = {
+      x: null,
+      y: null,
+      radius: 120
+    };
+
+    // تتبع حركة الفأرة داخل قسم الهيرو حصراً لعدم التأثير على بقية الصفحة
+    heroSection.addEventListener('mousemove', (event) => {
+      const rect = heroSection.getBoundingClientRect();
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    // تتبع أحداث اللمس للهواتف والأجهزة اللوحية بشكل استباقي لمنع أخطاء حركة الكانفاس
+    heroSection.addEventListener('touchmove', (event) => {
+      if (event.touches.length > 0) {
+        const rect = heroSection.getBoundingClientRect();
+        mouse.x = event.touches[0].clientX - rect.left;
+        mouse.y = event.touches[0].clientY - rect.top;
+      }
+    });
+
+    heroSection.addEventListener('touchend', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    // ملاءمة حجم الكانفاس لتغير حجم الشاشة بشكل متجاوب وسلس
+    function resizeCanvas() {
+      canvas.width = heroSection.offsetWidth;
+      canvas.height = heroSection.offsetHeight;
+      
+      // تقليل عدد الجسيمات على الهواتف لضمان أداء سلس و60 إطاراً بالثانية
+      numberOfParticles = canvas.width < 768 ? 40 : 80;
+      initParticles();
+    }
+
+    // فئة جزيئات جافا سكريبت التفاعلية
+    class Particle {
+      constructor(x, y, directionX, directionY, size, color) {
+        this.x = x;
+        this.y = y;
+        this.directionX = directionX;
+        this.directionY = directionY;
+        this.size = size;
+        this.color = color;
+      }
+
+      // رسم الجزيء الفردي بدقة عالية
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+
+      // تحديث حركة وموضع الجزيء وتفاعله مع الفأرة والحدود
+      update() {
+        if (this.x > canvas.width || this.x < 0) {
+          this.directionX = -this.directionX;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+          this.directionY = -this.directionY;
+        }
+
+        // تفاعل الجاذبية والابتعاد الخفيف عند اقتراب مؤشر الفأرة
+        if (mouse.x != null && mouse.y != null) {
+          let dx = mouse.x - this.x;
+          let dy = mouse.y - this.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < mouse.radius) {
+            if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+              this.x += 2;
+            }
+            if (mouse.x > this.x && this.x > this.size * 10) {
+              this.x -= 2;
+            }
+            if (mouse.y < this.y && this.y < canvas.height - this.size * 10) {
+              this.y += 2;
+            }
+            if (mouse.y > this.y && this.y > this.size * 10) {
+              this.y -= 2;
+            }
+          }
+        }
+
+        this.x += this.directionX;
+        this.y += this.directionY;
+        this.draw();
+      }
+    }
+
+    // جلب اللون المتناسق ديناميكياً بناءً على تفعيل الوضع المظلم
+    function getThemeColor() {
+      const isDark = htmlElem.classList.contains('dark');
+      return isDark ? 'rgba(187, 130, 255, 0.25)' : 'rgba(121, 71, 205, 0.18)';
+    }
+
+    function initParticles() {
+      particlesArray = [];
+      const color = getThemeColor();
+      for (let i = 0; i < numberOfParticles; i++) {
+        let size = (Math.random() * 2) + 1.2;
+        let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+        let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+        let directionX = (Math.random() * 0.4) - 0.2;
+        let directionY = (Math.random() * 0.4) - 0.2;
+
+        particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+      }
+    }
+
+    // رسم الخطوط الشبكية المترابطة بين جزيئات الكانفاس القريبة
+    function connectParticles() {
+      let opacityValue = 1;
+      const isDark = htmlElem.classList.contains('dark');
+      const maxDistance = 120;
+
+      for (let a = 0; a < particlesArray.length; a++) {
+        for (let b = a; b < particlesArray.length; b++) {
+          let dx = particlesArray[a].x - particlesArray[b].x;
+          let dy = particlesArray[a].y - particlesArray[b].y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < maxDistance) {
+            opacityValue = 1 - (distance / maxDistance);
+            ctx.strokeStyle = isDark 
+              ? `rgba(187, 130, 255, ${opacityValue * 0.15})` 
+              : `rgba(121, 71, 205, ${opacityValue * 0.12})`;
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+            ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    // متغيرات مخصصة لرسم الأورورا الهولوغرافية المتحركة في الخلفية
+    let auraAngle = 0;
+
+    function drawAuroraOverlay() {
+      const isDark = htmlElem.classList.contains('dark');
+      ctx.save();
+      ctx.globalCompositeOperation = 'screen';
+      
+      auraAngle += 0.002;
+      const cx1 = canvas.width * 0.3 + Math.sin(auraAngle) * 100;
+      const cy1 = canvas.height * 0.4 + Math.cos(auraAngle) * 100;
+      const cx2 = canvas.width * 0.7 + Math.cos(auraAngle * 0.8) * 120;
+      const cy2 = canvas.height * 0.6 + Math.sin(auraAngle * 0.8) * 120;
+
+      const gradient1 = ctx.createRadialGradient(cx1, cy1, 10, cx1, cy1, Math.min(canvas.width, canvas.height) * 0.6);
+      if (isDark) {
+        gradient1.addColorStop(0, 'rgba(121, 71, 205, 0.12)');
+        gradient1.addColorStop(0.5, 'rgba(154, 100, 238, 0.05)');
+        gradient1.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      } else {
+        gradient1.addColorStop(0, 'rgba(121, 71, 205, 0.07)');
+        gradient1.addColorStop(0.5, 'rgba(243, 190, 255, 0.03)');
+        gradient1.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      }
+
+      const gradient2 = ctx.createRadialGradient(cx2, cy2, 10, cx2, cy2, Math.min(canvas.width, canvas.height) * 0.7);
+      if (isDark) {
+        gradient2.addColorStop(0, 'rgba(187, 130, 255, 0.10)');
+        gradient2.addColorStop(0.5, 'rgba(30, 21, 56, 0.02)');
+        gradient2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      } else {
+        gradient2.addColorStop(0, 'rgba(154, 100, 238, 0.05)');
+        gradient2.addColorStop(0.5, 'rgba(243, 190, 255, 0.03)');
+        gradient2.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      }
+
+      ctx.fillStyle = gradient1;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient2;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.restore();
+    }
+
+    // حلقة الأنيميشن المستمرة للكانفاس لضمان أداء فائق النعومة 60fps
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawAuroraOverlay();
+
+      for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+      }
+      connectParticles();
+      requestAnimationFrame(animateParticles);
+    }
+
+    // الاستماع لأحداث النوافذ لتشغيل وإعادة رسم الكانفاس بدقة
+    window.addEventListener('resize', resizeCanvas);
+    
+    // ربط إعادة بناء الألوان بمفتاح تبديل الوضع الداكن
+    themeToggleBtn.addEventListener('click', () => {
+      setTimeout(() => {
+        initParticles();
+      }, 50);
+    });
+
+    // بدء تشغيل الأنيميشن فور اكتمال تحميل الصفحة
+    window.onload = function() {
+      resizeCanvas();
+      animateParticles();
+    };
+
+    // --- منطق تصفية وفرز المشاريع ---
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // تعديل حالة النشاط لأزرار التصفية
+      const buttons = ['all', 'web', 'system'];
+      buttons.forEach(btn => {
+        const el = document.getElementById(`filter-btn-${btn}`);
+        if (btn === category) {
+          el.classList.add('bg-button', 'text-button-title');
+        } else {
+          el.classList.remove('bg-button', 'text-button-title');
+        }
+      });
+    }
+
+    // تعيين التصفية الافتراضية للكل عند تحميل الصفحة
+    filterProjects('all');
+
+    // --- إدارة الإرسال الآمن للمعلومات واستعراض رسالة النجاح ---
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      successBox.classList.remove('hidden');
+      successBox.textContent = translations[currentLang].successText;
+      document.getElementById('contact-form').reset();
+      
+      setTimeout(() => {
+        successBox.classList.add('hidden');
+      }, 5000);
+    }
+  </script>
+
+ 
+  
+
+
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="./src/js/global.js"></script>
+  <script></script>
+</body>
+
+</html>

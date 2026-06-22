@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+ /* حل جذري لكل العناصر */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* لمنع التمرير المطاطي في آيفون */
+    touch-action: pan-y;
+    scroll-behavior: smooth;
+}
+
+@theme {
+  /* --- ألوان العناوين والنصوص --- */
+  --color-primary: #7947cd;
+  --color-secondary: #9a64ee;
+
+  /* --- ألوان الخلفيات --- */
+  --color-background: #fdfaff;
+  --color-bg-dark: #0f0b1e;
+  --color-card: #f3beff;
+  --color-card-dark: #1e1538;      
+
+  /* --- العناصر التفاعلية (أزرار ومدخلات) --- */
+  --color-button: #7947cd;
+  --color-button-hover: #9a64ee;
+  --color-button-title: #ffffff;
+ 
+  --color-icon: #bb82ff;
+  --color-input: #f3beff;
+  --color-input-dark: #2a1b4e;
+
+  /* --- الحدود والظلال (Borders & Shadows) --- */
+  --color-border: #c997ff;
+  --color-border-dark: #9a64ee;
+
+  /* --- الخط الموحد --- */
+  --font-primary: 'IBM Plex Sans Arabic';
+
+  /* --- أحجام النصوص --- */
+  --text-primary: 30px;
+  --text-secondary: 12px;
+}
