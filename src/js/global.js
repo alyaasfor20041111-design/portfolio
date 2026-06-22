@@ -67,7 +67,7 @@ const translations = {
         navSkills: "Skills",
         navTimeline: "Evolution",
         navContact: "Contact",
-        langBtn: "العربية",
+        langBtn: "ع",
         statusText: "Available for Projects",
         heroBadge: "AVAILABLE FOR COMMISSIONS & FULL-TIME ROLES",
         heroTitle: 'I am Alya Asfor <br><span class="bg-gradient-to-r from-primary via-secondary to-icon bg-clip-text text-transparent font-light text-2xl sm:text-4xl md:text-6xl mt-4 block">Software Engineer</span>',
